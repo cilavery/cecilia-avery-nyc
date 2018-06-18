@@ -1,4 +1,4 @@
 # My personal website
 
-[This site can be checked out at here] (http://cecilia.avery.nyc)
+You can check out this work in progress site here (http://cecilia.avery.nyc)
 
