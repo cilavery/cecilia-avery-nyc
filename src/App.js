@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,11 +6,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <img src="cil_winter.jpg" className="App-logo" alt="logo" />
+          <h1 className="Cecilia Song Avery">Welcome to My Website</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          I created this website to serve as a central hub for my online presence and to showcase any projects that I am working on. It's also a way to get to know a little more about me because I also do some other random stuff.
         </p>
       </div>
     );
