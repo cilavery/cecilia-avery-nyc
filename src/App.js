@@ -1,18 +1,78 @@
 import React, { Component } from 'react';
+import AboutMe from './AboutMe';
+import Projects from './Projects';
+import Contact from './Contact';
+import Connect from './Connect';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      aboutMe: false,
+      projects: false,
+      contact: false,
+      connect: false
+    }
+
+    this.hoverAboutMe = this.hoverAboutMe.bind(this);
+    this.hoverProjects = this.hoverProjects.bind(this);
+    this.hoverContact = this.hoverContact.bind(this);
+    this.hoverConnect = this.hoverConnect.bind(this);
+  }
+
+  hoverAboutMe() {
+    this.setState({
+      aboutMe: !this.state.aboutMe
+    })
+  }
+
+  hoverProjects() {
+    this.setState({
+      projects: !this.state.projects
+    })
+  }
+
+  hoverContact() {
+    this.setState({
+      contact: true
+    })
+  }
+
+  handleContact() {
+    this.setState({
+      contact: false
+    })
+  }
+
+  hoverConnect() {
+    this.setState({
+      connect: !this.state.connect
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src="cil_winter.jpg" className="App-logo" alt="logo" />
-          <h1 className="Cecilia Song Avery">Welcome to My Website</h1>
-        </header>
-        <p className="App-intro">
-          I created this website to serve as a central hub for my online presence and to showcase any projects that I am working on. It's also a way to get to know a little more about me because I also do some other random stuff.
-        </p>
+     <div>
+      <h1 className='title'>Cecilia Song Avery</h1>
+      <div className='title-box' onClick={this.hoverAboutMe}>
+      About Me
+      {this.state.aboutMe ? <AboutMe /> : null}
       </div>
+      <div className='title-box' onClick={this.hoverProjects}>
+      Projects
+      {this.state.projects ? <Projects /> : null}
+      </div>
+      <a href='https://medium.com/@ceciliasongavery' target='none'><div className='title-box'>Blog</div></a>
+      <div className='title-box' onClick={this.hoverContact}>
+      Contact
+      {this.state.contact ? <Contact handleContact={this.handleContact}/> : null}
+      </div>
+      <div className='title-box' onClick={this.hoverConnect}>
+      Connect
+      {this.state.connect ? <Connect /> : null}
+      </div>
+    </div>
     );
   }
 }
