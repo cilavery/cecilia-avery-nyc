@@ -55,6 +55,7 @@ class App extends Component {
     return (
      <div>
       <h1 className='title'>Cecilia Song Avery</h1>
+      <h3 id="subheadline"><em>So much to do, so little time.</em></h3>
       <div className='title-box' onClick={this.hoverAboutMe}>
       About Me
       {this.state.aboutMe ? <AboutMe /> : null}
