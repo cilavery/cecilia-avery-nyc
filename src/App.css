@@ -1,45 +1,89 @@
-body {
-  background-color: #1f2c47;
+:root {
+  --text-color: #292E49;
+  --link-color:  #536976;
+  --highlight-color: #BBD2C5;
+  --accent-color: orangered;
 }
 
-.title {
-  text-align: center;
-  color: white;
+.header-color {
+  background: #BBD2C5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#subheadline {
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-  color: white;
-  text-align: center;
+.projects-grid {
+  display: flex;
 }
 
-.title-box:hover {
-  background-color:white;
-  text-align: center;
-  margin: 2em 5em 2em 5em;
-  padding: 1.5em;
-  border-radius: 1%;
+.header-color .link {
+  color: var(--accent-color);
 }
 
-.title-box {
-  background-color: #ffa5d2;
-  text-align: center;
-  margin: 2em 5em 2em 5em;
-  padding: 1.5em;
-  border-radius: 1%;
-}
-
-a {
+.link {
+  color: var(--accent-color);
   text-decoration: none;
-  color: black;
 }
 
-.link-colored {
-  color: gray;
+.landing-grid {
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-ul li {
-  list-style-type: none;
+.profile-img {
+  height: 250px;
+  margin-top: 5em;
+  border-radius: 50%;
+  border: .8px solid var(--highlight-color);
+  box-shadow: 2px 2px 8px var(--text-color);
 }
+
+.banner-text {
+  opacity: .8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid var(--highlight-color);
+  margin-top: 3em;
+  box-shadow: 4px 6px 15px 3px var(--text-color);
+}
+
+.banner-text h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.banner-text hr {
+  border-top: 3px dotted var(--text-color);
+  padding-bottom: 2em;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: var(--text-color);
+  font-size: 20px;
+
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.social-links i {
+  color: var(--link-color);
+  font-size: 4em;
+  padding: 22px;
+}
+
+

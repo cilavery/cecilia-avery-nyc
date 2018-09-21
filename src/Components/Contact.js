@@ -17,6 +17,8 @@ class Contact extends Component {
 
   render() {
     return (
+      <div>
+      <h2>Contact</h2>
       <form onSubmit={this.handleSubmit}>
         <label>Your Name</label>
         <input type='text'></input>
@@ -26,6 +28,7 @@ class Contact extends Component {
         <input type='text'></input>
         <button type='submit'>Send</button>
       </form>
+      </div>
     )
   }
 }

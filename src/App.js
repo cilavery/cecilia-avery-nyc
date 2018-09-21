@@ -1,78 +1,37 @@
 import React, { Component } from 'react';
-import AboutMe from './AboutMe';
-import Projects from './Projects';
-import Contact from './Contact';
-import Connect from './Connect';
 import './App.css';
+import Main from './Components/Main';
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      aboutMe: false,
-      projects: false,
-      contact: false,
-      connect: false
-    }
-
-    this.hoverAboutMe = this.hoverAboutMe.bind(this);
-    this.hoverProjects = this.hoverProjects.bind(this);
-    this.hoverContact = this.hoverContact.bind(this);
-    this.hoverConnect = this.hoverConnect.bind(this);
-  }
-
-  hoverAboutMe() {
-    this.setState({
-      aboutMe: !this.state.aboutMe
-    })
-  }
-
-  hoverProjects() {
-    this.setState({
-      projects: !this.state.projects
-    })
-  }
-
-  hoverContact() {
-    this.setState({
-      contact: true
-    })
-  }
-
-  handleContact() {
-    this.setState({
-      contact: false
-    })
-  }
-
-  hoverConnect() {
-    this.setState({
-      connect: !this.state.connect
-    })
-  }
-
   render() {
     return (
-     <div>
-      <h1 className='title'>Cecilia Song Avery</h1>
-      <h3 id="subheadline"><em>So much to do, so little time.</em></h3>
-      <div className='title-box' onClick={this.hoverAboutMe}>
-      About Me
-      {this.state.aboutMe ? <AboutMe /> : null}
-      </div>
-      <div className='title-box' onClick={this.hoverProjects}>
-      Projects
-      {this.state.projects ? <Projects /> : null}
-      </div>
-      <a href='https://medium.com/@ceciliasongavery' target='none'><div className='title-box'>Blog</div></a>
-      <div className='title-box' onClick={this.hoverContact}>
-      Contact
-      {this.state.contact ? <Contact handleContact={this.handleContact}/> : null}
-      </div>
-      <div className='title-box' onClick={this.hoverConnect}>
-      Connect
-      {this.state.connect ? <Connect /> : null}
-      </div>
+      /* Uses a header that scrolls with the text, rather than staying locked at the top */
+    <div className="demo-big-content">
+        <Layout>
+        <Header className="header-color" title={<span><span style={{ color: '#ddd' }}></span><strong><Link className="link" to="/">Cecilia Avery</Link></strong></span>}>
+                <Navigation>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/aboutme">About Me</Link>
+                    <Link to="/resume">Resume</Link>
+                    <Link to="/contact">Contact</Link>
+                </Navigation>
+            </Header>
+            <Drawer title={<span><span style={{ color: '#ddd' }}></span><strong><Link className="link" to="/">Cecilia Avery</Link></strong></span>}>
+                <Navigation>
+                    <Link to="/projects">Projects</Link>
+                    <Link to="/aboutme">About Me</Link>
+                    <Link to="/resume">Resume</Link>
+                    <Link to="/contact">Contact</Link>
+                </Navigation>
+            </Drawer>
+            <Content>
+                <div className="page-content">
+                <Main />
+                </div>
+            </Content>
+        </Layout>
     </div>
     );
   }
