@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Textfield, Button } from 'react-mdl';
 
 class Contact extends Component {
   constructor(props) {
@@ -17,17 +18,30 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
-      <h2>Contact</h2>
-      <form onSubmit={this.handleSubmit}>
-        <label>Your Name</label>
-        <input type='text'></input>
-        <label>Your email</label>
-        <input type='text'></input>
-        <label>Your Message</label>
-        <input type='text'></input>
-        <button type='submit'>Send</button>
-      </form>
+      <div className="contact-form">
+      <Textfield
+        onChange={() => {}}
+        label="Your Name..."
+        floatingLabel
+        style={{ width: '200px'}}
+      />
+
+      <Textfield
+        onChange={() => {}}
+        label="Your Email..."
+        pattern="-?[0-9]*(\.[0-9]+)?"
+        error="please enter a valid email address"
+        floatingLabel
+        style={{ width: '200px'}}
+      />
+
+      <Textfield
+        onChange={() => {}}
+        label="Your Message..."
+        floatingLabel
+        style={{ width: '400px'}}
+      />
+      <Button primary ripple>Submit</Button>
       </div>
     )
   }

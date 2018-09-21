@@ -2,7 +2,7 @@
   --text-color: #292E49;
   --link-color:  #536976;
   --highlight-color: #BBD2C5;
-  --accent-color: orangered;
+  --accent-color: #ff8f66;
 }
 
 .header-color {
@@ -24,6 +24,7 @@
   text-decoration: none;
 }
 
+{/*landing page */}
 .landing-grid {
   background: #ECE9E6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
@@ -41,7 +42,6 @@
   margin-top: 5em;
   border-radius: 50%;
   border: .8px solid var(--highlight-color);
-  box-shadow: 2px 2px 8px var(--text-color);
 }
 
 .banner-text {
@@ -51,7 +51,6 @@
   border-radius: 10px;
   border: 1px solid var(--highlight-color);
   margin-top: 3em;
-  box-shadow: 4px 6px 15px 3px var(--text-color);
 }
 
 .banner-text h1 {
@@ -87,3 +86,12 @@
 }
 
 
+{/*contact page*/}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 4em;
+  width: 350px;
+
+}
