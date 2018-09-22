@@ -23,8 +23,8 @@ class Projects extends Component {
             hi
           </CardText>
           <CardActions border>
-            <Button colored><a href="https://github.com/acdc-1802/pintrips" target="_blank">Github</a></Button>
-            <Button colored><a href="http://www.mypintrips.com" target="_blank">LiveDemo</a></Button>
+            <Button colored><a href="https://github.com/acdc-1802/pintrips" target="_blank" rel="noopener noreferrer">Github</a></Button>
+            <Button colored><a href="http://www.mypintrips.com" target="_blank" rel="noopener noreferrer">LiveDemo</a></Button>
           </CardActions>
           <CardMenu style={{ color: '#fff'}}>
 
@@ -40,8 +40,8 @@ class Projects extends Component {
             hi2
           </CardText>
           <CardActions border>
-            <Button colored><a href="https://github.com/MAAC-sunshines/Grace-Shopper" target="_blank">Github</a></Button>
-            <Button colored><a href="https://airplay1802.herokuapp.com" target="_blank">LiveDemo</a></Button>
+            <Button colored><a href="https://github.com/MAAC-sunshines/Grace-Shopper" target="_blank" rel="noopener noreferrer">Github</a></Button>
+            <Button colored><a href="https://airplay1802.herokuapp.com" target="_blank" rel="noopener noreferrer">LiveDemo</a></Button>
           </CardActions>
           <CardMenu style={{ color: '#fff'}}>
 
@@ -57,8 +57,8 @@ class Projects extends Component {
             hi2
           </CardText>
           <CardActions border>
-            <Button colored><a href="https://github.com/cilavery/spotify-calendar" target="_blank">Github</a></Button>
-            <Button colored><a href="https://calendar-app-cil-avery.herokuapp.com/" target="_blank">LiveDemo</a></Button>
+            <Button colored><a href="https://github.com/cilavery/spotify-calendar" target="_blank" rel="noopener noreferrer">Github</a></Button>
+            <Button colored><a href="https://calendar-app-cil-avery.herokuapp.com/" target="_blank" rel="noopener noreferrer">LiveDemo</a></Button>
           </CardActions>
           <CardMenu style={{ color: '#fff'}}>
 
