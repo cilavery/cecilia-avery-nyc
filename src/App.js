@@ -8,10 +8,10 @@ class App extends Component {
   render() {
     return (
       /* Uses a header that scrolls with the text, rather than staying locked at the top */
-    <div className="demo-big-content">
+    <div>
         <Layout>
         <Header className="header-color" title={<span><span style={{ color: '#ddd' }}></span><strong><Link className="link" to="/">Cecilia Avery</Link></strong></span>}>
-                <Navigation>
+                <Navigation className="navigation-text">
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
                     <Link to="/resume">Resume</Link>
@@ -32,6 +32,7 @@ class App extends Component {
                 </div>
             </Content>
         </Layout>
+
     </div>
     );
   }

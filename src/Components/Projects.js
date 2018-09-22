@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab , Grid, Cell, Card, CardTitle, CardText,CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import { Tabs, Tab , Grid, Cell, Card, CardTitle, CardText,CardActions, Button, CardMenu } from 'react-mdl';
 
 class Projects extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class Projects extends Component {
       return (
         <div className="projects-grid">
         {/*project 1*/}
-        <Card shadow={5} style={{ minWidth: '450', margin: '20px'}}>
+        <Card shadow={5} className="project-card">
           <CardTitle style={{ color: 'black', height: '176px', background: 'url() center/cover'}}>
           myPintrips
           </CardTitle>
@@ -30,7 +30,7 @@ class Projects extends Component {
 
           </CardMenu>
         </Card>
-        <Card shadow={5} style={{ minWidth: '450', margin: '20px'}}>
+        <Card shadow={5} className="project-card">
           <CardTitle style={{ color: 'black', height: '176px', background: 'url() center/cover'}}>
           myPintrips
           </CardTitle>

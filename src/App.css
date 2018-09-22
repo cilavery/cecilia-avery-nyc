@@ -3,20 +3,21 @@
   --link-color:  #536976;
   --highlight-color: #BBD2C5;
   --accent-color: #ff8f66;
+  --lightbackground-color: #ECE9E6)
 }
 
 .header-color {
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.projects-grid {
-  display: flex;
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .header-color .link {
   color: var(--accent-color);
+}
+
+.navigation-text {
+  color: black;
 }
 
 .link {
@@ -24,22 +25,11 @@
   text-decoration: none;
 }
 
-{/*landing page */}
-.landing-grid {
-  background: #ECE9E6;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  position:fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+/*landing page */
 
 .profile-img {
   height: 250px;
-  margin-top: 5em;
+  margin-top: 2em;
   border-radius: 50%;
   border: .8px solid var(--highlight-color);
 }
@@ -74,19 +64,59 @@
 
 .social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 50%;
   margin: auto;
 }
 
 .social-links i {
   color: var(--link-color);
-  font-size: 4em;
-  padding: 22px;
+  font-size: 3em;
+  padding: 18px;
+}
+
+/*page content*/
+.page-content {
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  position:fixed;
+  top: 8vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+/*drawer*/
+.material-icons {
+  color: var(--link-color);
+}
+
+/*projects*/
+.projects-grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-card {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card {
+    margin: 20px;
+  }
 }
 
 
-{/*contact page*/}
+/*contact page*/
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -95,3 +125,5 @@
   width: 350px;
 
 }
+
+

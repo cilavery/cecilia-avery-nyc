@@ -14,8 +14,7 @@ class LandingPage extends Component {
             />
 
             <div className="banner-text">
-              <h5>Software Developer</h5>
-              <p>I am learning software development!</p>
+              <h5>Front End Web Developer</h5>
               <hr />
               <p>Javascript | HTML | CSS | React</p>
               <div className="social-links">
