@@ -120,6 +120,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: auto;
   padding: 4em;
   width: 350px;

@@ -1,47 +1,84 @@
 import React, { Component } from 'react';
 import { Textfield, Button } from 'react-mdl';
+import * as emailjs from 'emailjs-com';
 
 class Contact extends Component {
   constructor(props) {
     super(props)
     this.state = {
       yourName: '',
+      yourEmail: '',
       yourMessage: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleMessageChange = this.handleMessageChange.bind(this);
   }
 
-  handleSubmit() {
-    this.props.handleContact();
+  handleNameChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
+
+  handleEmailChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleMessageChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const templateParams = {
+      user_name: this.state.yourName,
+      user_email: this.state.yourEmail,
+      text: this.state.yourMessage
+    }
+    console.log('templateParams', templateParams)
+    emailjs.send('default_service', 'personal_portolio_website', templateParams, 'user_y9Gpr6VKiWp0BpC5djRDe')
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+          console.log('FAILED...', error);
+      });
+  }
+
 
   render() {
     return (
       <div className="contact-form">
+      <form onSubmit={(e) => this.handleSubmit(e)}>
       <Textfield
-        onChange={() => {}}
+        name="yourName"
+        onChange={(e) => this.handleNameChange(e)}
         label="Your Name..."
         floatingLabel
-        style={{ width: '200px'}}
       />
 
       <Textfield
-        onChange={() => {}}
+        name="yourEmail"
+        onChange={(e) => this.handleEmailChange(e)}
         label="Your Email..."
-        pattern="-?[0-9]*(\.[0-9]+)?"
-        error="please enter a valid email address"
+
         floatingLabel
-        style={{ width: '200px'}}
       />
 
       <Textfield
-        onChange={() => {}}
+        name="yourMessage"
+        onChange={(e) => this.handleMessageChange(e)}
         label="Your Message..."
         floatingLabel
-        style={{ width: '400px'}}
       />
-      <Button primary ripple>Submit</Button>
+      <Button primary ripple type='submit'>Submit</Button>
+      </form>
       </div>
     )
   }
