@@ -5,6 +5,9 @@
   --accent-color: #ff8f66;
   --lightbackground-color: #ECE9E6)
 }
+a {
+  text-decoration: none;
+}
 
 .header-color {
   background: #ECE9E6;  /* fallback for old browsers */
@@ -98,6 +101,8 @@
 .projects-grid {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-card {
@@ -113,6 +118,11 @@
   .project-card {
     margin: 20px;
   }
+}
+/*about me */
+.about-me {
+  margin: auto;
+  max-width: 80vw;
 }
 
 

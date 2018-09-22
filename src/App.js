@@ -9,7 +9,7 @@ class App extends Component {
     return (
       /* Uses a header that scrolls with the text, rather than staying locked at the top */
     <div>
-        <Layout>
+        <Layout className='header-color'>
         <Header className="header-color" title={<span><span style={{ color: '#ddd' }}></span><strong><Link className="link" to="/">Cecilia Avery</Link></strong></span>}>
                 <Navigation className="navigation-text">
                     <Link to="/projects">Projects</Link>

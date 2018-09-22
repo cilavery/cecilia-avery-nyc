@@ -16,7 +16,7 @@ class LandingPage extends Component {
             <div className="banner-text">
               <h5>Front End Web Developer</h5>
               <hr />
-              <p>Javascript | HTML | CSS | React</p>
+              <p>Javascript | HTML | CSS | React | Redux</p>
               <div className="social-links">
                 <a href="http://www.github.com/cilavery" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"
