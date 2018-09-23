@@ -103,6 +103,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 3em;
 }
 
 .project-card {
@@ -119,10 +120,21 @@ a {
     margin: 20px;
   }
 }
+
+.card-text {
+  height: 150px;
+  text-align: justify;
+}
+
+.card-space {
+  height: 1em;
+}
+
 /*about me */
 .about-me {
   margin: auto;
   max-width: 80vw;
+  text-align: justify;
 }
 
 
