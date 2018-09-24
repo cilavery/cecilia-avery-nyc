@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Textfield, Button } from 'react-mdl';
+import history from '../history';
 import * as emailjs from 'emailjs-com';
 
 class Contact extends Component {
@@ -8,7 +9,8 @@ class Contact extends Component {
     this.state = {
       yourName: '',
       yourEmail: '',
-      yourMessage: ''
+      yourMessage: '',
+      loading: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,12 +44,19 @@ class Contact extends Component {
       user_email: this.state.yourEmail,
       text: this.state.yourMessage
     }
+
+    this.setState({
+      loading: true
+    })
+
     emailjs.send('default_service', 'personal_portolio_website', templateParams, 'user_y9Gpr6VKiWp0BpC5djRDe')
-      .then(function(response) {
+      .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        this.setState({ loading: false });
+        history.push('/message_sent');
       }, function(error) {
           console.log('FAILED...', error);
-      });
+      })
   }
 
 
@@ -77,8 +86,13 @@ class Contact extends Component {
         onChange={(e) => this.handleMessageChange(e)}
         label="Your Message..."
         floatingLabel
+        rows={5}
       />
-      <Button primary ripple type='submit'>Submit</Button>
+
+      {
+        !this.state.loading ? <Button primary ripple type='submit'>Submit</Button>
+        : <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+      }
       </form>
       </div>
     )
