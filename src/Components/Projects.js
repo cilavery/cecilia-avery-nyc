@@ -100,7 +100,7 @@ class Projects extends Component {
           <CardTitle style={{ color: 'black', height: '176px', background: 'url(../halp.png) center/cover'}}>
           </CardTitle>
           <CardText className="card-text">
-            <strong>Halp</strong><br />User can input pro and con points of a decision. Data is then presented graphically to help the user make a decision.<div className="card-space"></div><strong>Technologies</strong><br />React, Sequelize, Express, Postgres, Javascript, HTML, CSS, Victory Data Charting Library for React
+            <strong>Halp</strong><br />User can input pro and con points of a decision. Data is then presented graphically to help the user make a decision.<div className="card-space"></div><strong>Technologies</strong><br />React, Redux, Sequelize, Express, Postgres, Javascript, HTML, CSS, Victory Data Charting Library for React
             </CardText>
           <CardActions border>
             <Button colored><a href="https://github.com/cilavery/HALP" target="_blank" rel="noopener noreferrer">Github</a></Button>
@@ -113,55 +113,9 @@ class Projects extends Component {
         </div>
       )
     }
-
-    {//turn off if multiple projects}
-    {
-    // else if (this.state.activeTab === 1) {
-    //   return(
-    //     <div className="projects-grid">
-    //     {/*project 2*/}
-    //     <Card shadow={5} style={{ minWidth: '450', margin: 'auto'}}>
-    //       <CardTitle style={{ color: 'black', height: '176px', background: 'url() center/cover'}}>
-    //       Calendar App
-    //       </CardTitle>
-    //       <CardText>
-    //         hi
-    //       </CardText>
-    //       <CardActions border>
-    //         <Button colored>Github</Button>
-    //         <Button colored>LiveDemo</Button>
-    //       </CardActions>
-    //       <CardMenu style={{ color: '#fff'}}>
-
-    //       </CardMenu>
-    //     </Card>
-    //     </div>
-    //   )
-    // } else if (this.state.activeTab === 2) {
-    //   return(
-    //     <div className="projects-grid">
-    //      {/*project 3*/}
-    //      <Card shadow={5} style={{ minWidth: '450', margin: 'auto'}}>
-    //      <CardTitle style={{ color: 'black', height: '176px', background: 'url() center/cover'}}>
-    //      E-commerce Mock site
-    //      </CardTitle>
-    //      <CardText>
-    //        hi
-    //      </CardText>
-    //      <CardActions border>
-    //        <Button colored>Github</Button>
-    //        <Button colored>LiveDemo</Button>
-    //      </CardActions>
-    //      <CardMenu style={{ color: '#fff'}}>
-
-    //      </CardMenu>
-    //    </Card>
-    //    </div>
-    //   )
-    }
-     }
-
   }
+
+
 
   render() {
     return (

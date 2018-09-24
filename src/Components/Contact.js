@@ -42,7 +42,6 @@ class Contact extends Component {
       user_email: this.state.yourEmail,
       text: this.state.yourMessage
     }
-    console.log('templateParams', templateParams)
     emailjs.send('default_service', 'personal_portolio_website', templateParams, 'user_y9Gpr6VKiWp0BpC5djRDe')
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
@@ -53,6 +52,7 @@ class Contact extends Component {
 
 
   render() {
+
     return (
       <div className="contact-form">
       <form onSubmit={(e) => this.handleSubmit(e)}>
@@ -67,7 +67,8 @@ class Contact extends Component {
         name="yourEmail"
         onChange={(e) => this.handleEmailChange(e)}
         label="Your Email..."
-
+        pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+        error="Please use a valid email address"
         floatingLabel
       />
 
