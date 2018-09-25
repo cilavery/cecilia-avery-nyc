@@ -5,6 +5,9 @@ class Resume extends Component {
     return (
       <div>
         <h4>Resume</h4>
+        <div className="resume">
+          <a href="./Cecilia_Avery_Resume.pdf">here</a>
+        </div>
       </div>
     )
   }
