@@ -3,6 +3,12 @@ import './App.css';
 import Main from './Components/Main';
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+    ReactGA.initialize('UA-126493246-1');
+    ReactGA.pageview('/');
+}
 
 class App extends Component {
 
