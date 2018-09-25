@@ -12,19 +12,21 @@ class App extends Component {
     return (
     <div className="demo-big-content">
         <Layout>
-            <Header className="header-color" title={title} scroll>
+            <Header className="header" title={title} scroll>
                 <Navigation className="navigation-text header">
-                    <Link to="/projects">Projects</Link>
-                    <Link to="/aboutme">About Me</Link>
-                    <Link to="/resume">Resume</Link>
-                    <Link to="/contact">Contact</Link>
+                <div className="header-color">
+                    <Link className="header-link" to="/projects">Projects</Link>
+                    <Link className="header-link"  to="/aboutme">About Me</Link>
+                    {/* <Link className="header-link"  to="/resume">Resume</Link> */}
+                    <Link className="header-link"  to="/contact">Contact</Link>
+                </div>
                 </Navigation>
             </Header>
             <Drawer title={title}>
                 <Navigation>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
-                    <Link to="/resume">Resume</Link>
+                    {/* <Link to="/resume">Resume</Link> */}
                     <Link to="/contact">Contact</Link>
                 </Navigation>
             </Drawer>

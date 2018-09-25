@@ -5,15 +5,26 @@
   --accent-color: #ff8f66;
   --lightbackground-color: #ECE9E6;
 }
+
 a {
   text-decoration: none;
 }
 
-.header-color {
+/*navbar*/
+.header {
   background: whitesmoke;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, whitesmoke, whitesmoke);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, whitesmoke, whitesmoke); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.header-link {
+  color: var(--text-color);
+  padding: 2em;
+}
+
+.header-link:hover {
+  color: var(--highlight-color);
+  padding: 2em;
 }
 
 .title-link {
