@@ -20,10 +20,10 @@ class App extends Component {
         <Layout>
             <Header className="header" title={title} scroll>
                 <Navigation className="navigation-text header">
-                <div className="header-color">
+                <div>
                     <Link className="header-link" to="/projects">Projects</Link>
                     <Link className="header-link"  to="/aboutme">About Me</Link>
-                    {/* <Link className="header-link"  to="/resume">Resume</Link> */}
+                    <Link className="header-link"  to="/resume">Resume</Link>
                     <Link className="header-link"  to="/contact">Contact</Link>
                 </div>
                 </Navigation>
@@ -32,13 +32,13 @@ class App extends Component {
                 <Navigation>
                     <Link to="/projects">Projects</Link>
                     <Link to="/aboutme">About Me</Link>
-                    {/* <Link to="/resume">Resume</Link> */}
+                    <Link to="/resume">Resume</Link>
                     <Link to="/contact">Contact</Link>
                 </Navigation>
             </Drawer>
             <Content>
                 <div className="page-content">
-                <Main />
+                    <Main />
                 </div>
             </Content>
         </Layout>

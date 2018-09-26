@@ -42,11 +42,12 @@ a {
 
 .banner-text {
   opacity: .8;
-  width: 75%;
+  width: 60%;
   margin: auto;
   border-radius: 10px;
   border: 1px solid var(--highlight-color);
   margin-top: 3em;
+  background:white;
 }
 
 .banner-text h1 {
@@ -57,7 +58,6 @@ a {
 
 .banner-text hr {
   border-top: 3px dotted var(--text-color);
-  padding-bottom: 2em;
   width: 50%;
   margin: auto;
 }
@@ -94,8 +94,16 @@ a {
 
 /*drawer*/
 .material-icons {
-  color: var(--link-color);
+  color: whitesmoke;
 }
+
+@media only screen and (max-width: 1140px) {
+  .material-icons {
+    color: var(--link-color);
+  }
+}
+
+
 
 /*projects*/
 .projects-grid {
@@ -124,6 +132,7 @@ a {
 .card-text {
   height: 150px;
   text-align: justify;
+  border-top: .3px solid #ddd;
 }
 
 .card-space {
@@ -131,12 +140,21 @@ a {
 }
 
 /*about me */
+
+.about-me-space {
+  height: 7em;
+}
+
 .about-me {
   margin: auto;
   max-width: 80vw;
   text-align: justify;
 }
 
+/*resume*/
+.resume {
+  padding-top: 4em;
+}
 
 /*contact page*/
 .contact-form {
