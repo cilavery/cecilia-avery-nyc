@@ -5,7 +5,8 @@ import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-126493246-1')
+ReactGA.initialize('UA-126493246-1', { debug: true });
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
 
