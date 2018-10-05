@@ -9,12 +9,12 @@ import MessageSent from './MessageSent';
 
 const Main = () => (
       <Switch>
-        <Route exact path="/" onEnter={ fireTracking }component ={LandingPage} />
-        <Route path="/aboutme" onEnter={ fireTracking }component ={AboutMe} />
-        <Route path="/contact" onEnter={ fireTracking }component ={Contact} />
-        <Route path="/projects" onEnter={ fireTracking }component ={Projects} />
-        <Route path="/resume" onEnter={ fireTracking }component ={Resume} />
-        <Route path="/message_sent" onEnter={ fireTracking }component={MessageSent}/>
+        <Route exact path="/" component ={LandingPage} />
+        <Route path="/aboutme" component ={AboutMe} />
+        <Route path="/contact" component ={Contact} />
+        <Route path="/projects" component ={Projects} />
+        <Route path="/resume" component ={Resume} />
+        <Route path="/message_sent" component={MessageSent}/>
       </Switch>
 )
 
